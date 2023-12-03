@@ -11,29 +11,26 @@ pipeline {
   }
 
   stages {
-    stage('Terraform Initdddddddddddd') {
+    stage('Terraform Init) {
       steps {
-        script {
-          terraformExecutor()
-          terraform.init()
-        }
+        terraformExecutor()
       }
     }
 
-    stage('Terraform Apply') {
-      steps {
-        script {
-          terraform.apply()
-        }
-      }
-    }
+    // stage('Terraform Apply') {
+    //   steps {
+    //     script {
+    //       terraform.apply()
+    //     }
+    //   }
+    // }
 
-    stage('Terraform Destroy') {
-      steps {
-        script {
-          terraform.destroy()
-        }
-      }
-    }
+    // stage('Terraform Destroy') {
+    //   steps {
+    //     script {
+    //       terraform.destroy()
+    //     }
+    //   }
+    // }
   }
 }
