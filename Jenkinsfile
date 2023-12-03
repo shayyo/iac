@@ -1,7 +1,7 @@
 @Library('my-shared-library') _
 
 pipeline {
-  agent { label 'master'} 
+  agent { label 'terraform'} 
 
   environment {
     // AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
