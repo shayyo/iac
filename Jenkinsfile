@@ -11,7 +11,7 @@ pipeline {
   }
 
   stages {
-    stage('Terraform Init) {
+    stage('Terraform Init') {
       steps {
         terraformExecutor()
       }
