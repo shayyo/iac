@@ -1,31 +1,38 @@
+@Library('my-shared-library') _
+
 pipeline {
-    
-    agent { label 'terraform' }
-    
-    options { 
-        timeout(time: 2, unit: 'MINUTES')
-        ansiColor('xterm')
+  agent any 
+
+  environment {
+    // AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
+    // AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
+    AWS_ACCESS_KEY_ID = "sahdksagdkasdgkasdh"
+    AWS_SECRET_ACCESS_KEY = "sadsadasdasdsadsadsadsad"
+  }
+
+  stages {
+    stage('Terraform Init') {
+      steps {
+        script {
+          terraform.init()
+        }
+      }
     }
 
-    parameters {
-        choice(name: 'NUMBER_OF_EC2_INSTANCES', choices: ['one', 'two', 'three'], description: '')
+    stage('Terraform Apply') {
+      steps {
+        script {
+          terraform.apply()
+        }
+      }
     }
 
-    stages {
-        stage('Terraform init') {
-            steps {
-              sh 'terraform init'
-            }
+    stage('Terraform Destroy') {
+      steps {
+        script {
+          terraform.destroy()
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+      }
     }
+  }
 }
