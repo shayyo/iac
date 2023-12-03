@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Terraform init') {
             steps {
-                sh 'echo "The current working directory is: $PWD"'
+              sh 'terraform init'
             }
         }
         stage('Test') {
