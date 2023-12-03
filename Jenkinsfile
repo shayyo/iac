@@ -4,7 +4,7 @@ pipeline {
     
     options { 
         timeout(time: 2, unit: 'MINUTES')
-        nsiColor('xterm')
+        ansiColor('xterm')
     }
 
     parameters {
