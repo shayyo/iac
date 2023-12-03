@@ -1,5 +1,5 @@
 pipeline {
-    agent { label: terraformed }
+    agent { label 'terraformed' }
 
     stages {
         stage('Build') {
