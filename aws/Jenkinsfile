@@ -9,8 +9,6 @@ pipeline {
     stages {
         stage('Terraform init') {
             steps {
-              sh 'cd aws'
-              sh 'echo "The current working directory is: $PWD"'
               sh 'terraform init'
             }
         }
