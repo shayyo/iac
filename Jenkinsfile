@@ -10,6 +10,7 @@ pipeline {
         stage('Terraform init') {
             steps {
                 sh 'cd aws'
+                sh '$PWD'
                 sh "terraform init"
             }
         }
