@@ -1,5 +1,9 @@
 @Library('my-shared-library') _
 
+options {
+  ansiColor('xterm')
+}
+
 pipeline {
   agent { label 'terraform'} 
 
