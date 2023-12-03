@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Terraform Init') {
       steps {
-        terraformAwsInit(fname="shay", lname="uri")
+        terraformAwsInit(config.fname="shay", config.lname="uri")
       }
     }
   }
