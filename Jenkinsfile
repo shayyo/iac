@@ -9,9 +9,9 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
+        stage('Print user-selected parameters') {
             steps {
-                echo 'Building..'
+                echo "The user selected: ${params.CHOICES}"
             }
         }
         stage('Test') {
