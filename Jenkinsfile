@@ -14,6 +14,7 @@ pipeline {
     stage('Terraform Initdddddddddddd') {
       steps {
         script {
+          terraformExecutor()
           terraform.init()
         }
       }
