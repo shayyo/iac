@@ -16,21 +16,5 @@ pipeline {
         terraformExecutor()
       }
     }
-
-    // stage('Terraform Apply') {
-    //   steps {
-    //     script {
-    //       terraform.apply()
-    //     }
-    //   }
-    // }
-
-    // stage('Terraform Destroy') {
-    //   steps {
-    //     script {
-    //       terraform.destroy()
-    //     }
-    //   }
-    // }
   }
 }
