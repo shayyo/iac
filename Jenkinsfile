@@ -14,7 +14,7 @@ pipeline {
     stage('Terraform Init') {
       steps {
         sh 'echo "tesTTT"'
-        terraformExecutor()
+        helloWorld()
       }
     }
   }
