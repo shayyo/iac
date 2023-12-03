@@ -1,11 +1,11 @@
 @Library('my-shared-library') _
 
-options {
-  ansiColor('xterm')
-}
-
 pipeline {
-  agent { label 'terraform'} 
+  agent { label 'terraform'}
+
+  options {
+    ansiColor('xterm')
+  }
 
   environment {
     // AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
