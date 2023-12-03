@@ -13,8 +13,7 @@ pipeline {
   stages {
     stage('Terraform Init') {
       steps {
-        sh 'echo "tesTTT"'
-        helloWorld()
+        terraformAwsInit(fname="shay", lname="uri")
       }
     }
   }
