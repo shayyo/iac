@@ -1,7 +1,7 @@
 @Library('my-shared-library') _
 
 pipeline {
-  agent any 
+  agent { label 'master'} 
 
   environment {
     // AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')
