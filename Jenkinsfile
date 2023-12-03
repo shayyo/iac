@@ -3,15 +3,13 @@ pipeline {
     agent { label 'terraform' }
 
     parameters {
-        text(name: 'BIOGRAPHY', defaultValue: '', description: 'Enter some information about the person')
-        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
-        choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '')
+        choice(name: 'NUMBER_OF_EC2_INSTANCES', choices: ['one', 'two', 'three'], description: '')
     }
 
     stages {
-        stage('Print user-selected parameters') {
+        stage('Terraform init') {
             steps {
-                echo "The user selected: ${params.CHOICES}"
+                sh "terraform init"
             }
         }
         stage('Test') {
