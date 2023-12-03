@@ -1,6 +1,11 @@
 pipeline {
     
     agent { label 'terraform' }
+    
+    options { 
+        timeout(time: 2, unit: 'MINUTES')
+        nsiColor('xterm')
+    }
 
     parameters {
         choice(name: 'NUMBER_OF_EC2_INSTANCES', choices: ['one', 'two', 'three'], description: '')
