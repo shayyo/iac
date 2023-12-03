@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Terraform init') {
             steps {
+                sh "cd aws"
                 sh "terraform init"
             }
         }
