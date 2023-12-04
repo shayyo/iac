@@ -18,9 +18,9 @@ pipeline {
     stage('Terraform Initialization') {
       steps {
         script {
-          terraformAwsInit.terraform_initialize()
-          terraformAwsInit.terraform_plan()
-          terraformAwsInit.terraform_apply() 
+          terraformAws.terraform_initialize()
+          terraformAws.terraform_plan()
+          terraformAws.terraform_apply() 
         }
       }
     }
