@@ -20,7 +20,6 @@ pipeline {
         script {
           terraformAws.terraform_initialize()
           terraformAws.terraform_plan()
-          terraformAws.terraform_apply() 
         }
       }
     }
