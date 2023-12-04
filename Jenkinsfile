@@ -15,6 +15,9 @@ pipeline {
   }
 
   stages {
+    stage('Run local script') {
+      sh 'hostname'
+    }
     stage('Terraform Initialization') {
       steps {
         script {
