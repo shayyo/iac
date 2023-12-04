@@ -17,6 +17,12 @@ pipeline {
       steps {
         script {
           terraformAws.terraform_initialize()
+        }
+      }
+    }
+    stage('Terraform Planning') {
+      steps {
+        script {
           terraformAws.terraform_plan()
         }
       }
