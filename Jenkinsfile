@@ -17,7 +17,7 @@ pipeline {
   stages {
     stage('Terraform Initialization') {
       steps {
-        terraformAwsInit()
+        terraformAwsInit.tinit()
       }
     }
   }
